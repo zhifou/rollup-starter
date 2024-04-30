@@ -37,13 +37,8 @@ export default defineConfig([
             {
                 file: "dist/bundle.d.ts",
                 format: "esm",
-                sourcemap: true,
-                globals: {
-                    react: "react",
-                },
             },
         ],
         plugins: [dts()],
-        external: ["react"], // 项目中引用的第三方库
     },
 ]);

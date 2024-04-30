@@ -4,9 +4,13 @@
  */
 import { useEffect, useState, useCallback } from "react";
 
-type Size = { width?: number; height?: number };
+export type Size = { width?: number; height?: number };
 
-const useWindowSize = () => {
+/**
+ * 监听窗口大小变化的Hook组件
+ * @returns {Size} 窗口宽高对象
+ */
+const useWindowSize = (): Size => {
     const [state, setState] = useState<Size>(() => {
         const { clientWidth, clientHeight } = (document as Document)
             .documentElement;
